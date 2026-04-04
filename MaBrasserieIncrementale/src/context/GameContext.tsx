@@ -16,8 +16,10 @@ export function GameProvider({ children }: { children: ReactNode }) {
     const saved = localStorage.getItem("score");
     return saved ? Number(saved) : 0;
   });
+  // @ts-ignore
   const [multiplier, setMultiplier] = useState(1);
   const [shopUnlocked, setShopUnlocked] = useState(false);
+  // @ts-ignore
   const [jobName, setJobName] = useState("Employé agricole");
   const increment = () => setScore((prev) => prev + multiplier);
 
